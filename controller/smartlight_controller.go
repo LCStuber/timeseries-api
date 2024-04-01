@@ -20,7 +20,7 @@ func GetSmartLights(c *gin.Context) {
 	}
 
 	if interval > 400{
-		c.JSON(400, gin.H{"error": "Interval must be less than 1000"})
+		c.JSON(400, gin.H{"error": "Interval must be less than 400"})
 		return
 	}
 
