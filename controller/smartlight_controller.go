@@ -80,6 +80,8 @@ func GetSmartLights(c *gin.Context) {
 					"rxInfo_rssi_0": value["rxInfo_rssi_0"],
 					"txInfo_dataRate_spreadFactor": value["txInfo_dataRate_spreadFactor"],
 					"txInfo_frequency": value["txInfo_frequency"],
+					"data_humidity": value["data_humidity"],
+					"data_temperature": value["data_temperature"],
 			},
 			"name": "SmartLights",
 			"tags": gin.H{
