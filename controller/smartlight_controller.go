@@ -52,8 +52,6 @@ func GetSmartLights(c *gin.Context) {
 			"fields": gin.H{
 					"data_counter_0d_0": value["data_counter_0d_0"],
 					"data_counter_0d_1": value["data_counter_0d_1"],
-					"data_energy_0": value["data_energy_0"],
-					"data_energy_1": value["data_energy_1"],
 					"fCnt": value["fCnt"],
 					"rxInfo_altitude_0": value["rxInfo_altitude_0"],
 					"rxInfo_latitude_0": value["rxInfo_latitude_0"],
@@ -116,8 +114,6 @@ func GetSmartLightbyNodeName(c *gin.Context) {
 			"fields": gin.H{
 					"data_counter_0d_0": value["data_counter_0d_0"],
 					"data_counter_0d_1": value["data_counter_0d_1"],
-					"data_energy_0": value["data_energy_0"],
-					"data_energy_1": value["data_energy_1"],
 					"fCnt": value["fCnt"],
 					"rxInfo_altitude_0": value["rxInfo_altitude_0"],
 					"rxInfo_latitude_0": value["rxInfo_latitude_0"],
@@ -184,8 +180,6 @@ func GetSmartLightbyDevEUI(c *gin.Context) {
 			"fields": gin.H{
 					"data_counter_0d_0": value["data_counter_0d_0"],
 					"data_counter_0d_1": value["data_counter_0d_1"],
-					"data_energy_0": value["data_energy_0"],
-					"data_energy_1": value["data_energy_1"],
 					"fCnt": value["fCnt"],
 					"rxInfo_altitude_0": value["rxInfo_altitude_0"],
 					"rxInfo_latitude_0": value["rxInfo_latitude_0"],
