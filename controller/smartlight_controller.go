@@ -35,7 +35,7 @@ func GetSmartLights(c *gin.Context) {
 
 	query := `
 		SELECT *
-		FROM "SmartLights"
+		FROM "SmartLight"
 		WHERE "time" >= now() - interval '` + intervalStr + ` minutes'
 		ORDER BY time DESC;
 	`
@@ -98,7 +98,7 @@ func GetSmartLightbyNodeName(c *gin.Context) {
 	defer influxDB.Close() // Close the client connection after the function ends
 	query := `
 		SELECT *
-		FROM "SmartLights"
+		FROM "SmartLight"
 		WHERE "nodeName" = '` + nodename + `'
 		ORDER BY time DESC;
 	`
@@ -164,7 +164,7 @@ func GetSmartLightbyDevEUI(c *gin.Context) {
 	defer influxDB.Close() // Close the client connection after the function ends
 	query := `
 		SELECT *
-		FROM "SmartLights"
+		FROM "SmartLight"
 		WHERE "devEUI" = '` + devEUI + `'
 		ORDER BY time DESC;
 	`

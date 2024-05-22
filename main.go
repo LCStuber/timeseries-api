@@ -11,8 +11,8 @@ func main() {
 	api := r.Group("/api/timeseries/v0.2/smartcampusmaua")
 	{
 		api.GET("SmartLights", controller.GetSmartLights)
-		api.GET("SmartLights/deviceName/:nodename", controller.GetSmartLightbyNodeName)
-		api.GET("SmartLights/deviceId/:devEUI", controller.GetSmartLightbyDevEUI)
+		api.GET("SmartLight/deviceName/:nodename", controller.GetSmartLightbyNodeName)
+		api.GET("SmartLight/deviceId/:devEUI", controller.GetSmartLightbyDevEUI)
 
 		api.GET("WaterTankLevel", controller.GetWaterTankLevel)
 		api.GET("WaterTankLevel/deviceName/:nodename", controller.GetWaterTankLevelbyNodeName)
