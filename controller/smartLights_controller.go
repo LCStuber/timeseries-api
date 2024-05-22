@@ -52,6 +52,8 @@ func GetSmartLights(c *gin.Context) {
 			"fields": gin.H{
 				"data_counter_0d_0":            value["data_counter_0d_0"],
 				"data_counter_0d_1":            value["data_counter_0d_1"],
+				"data_humidity":                value["data_humidity"],
+				"data_temperature":             value["data_temperature"],
 				"fCnt":                         value["fCnt"],
 				"rxInfo_altitude_0":            value["rxInfo_altitude_0"],
 				"rxInfo_latitude_0":            value["rxInfo_latitude_0"],
@@ -60,12 +62,9 @@ func GetSmartLights(c *gin.Context) {
 				"rxInfo_rssi_0":                value["rxInfo_rssi_0"],
 				"txInfo_dataRate_spreadFactor": value["txInfo_dataRate_spreadFactor"],
 				"txInfo_frequency":             value["txInfo_frequency"],
-				"data_humidity":                value["data_humidity"],
-				"data_temperature":             value["data_temperature"],
 			},
 			"name": "SmartLights",
 			"tags": gin.H{
-
 				"applicationID":              value["applicationID"],
 				"devEUI":                     value["devEUI"],
 				"fPort":                      value["fPort"],
@@ -114,6 +113,8 @@ func GetSmartLightbyNodeName(c *gin.Context) {
 			"fields": gin.H{
 				"data_counter_0d_0":            value["data_counter_0d_0"],
 				"data_counter_0d_1":            value["data_counter_0d_1"],
+				"data_humidity":                value["data_humidity"],
+				"data_temperature":             value["data_temperature"],
 				"fCnt":                         value["fCnt"],
 				"rxInfo_altitude_0":            value["rxInfo_altitude_0"],
 				"rxInfo_latitude_0":            value["rxInfo_latitude_0"],
@@ -122,12 +123,9 @@ func GetSmartLightbyNodeName(c *gin.Context) {
 				"rxInfo_rssi_0":                value["rxInfo_rssi_0"],
 				"txInfo_dataRate_spreadFactor": value["txInfo_dataRate_spreadFactor"],
 				"txInfo_frequency":             value["txInfo_frequency"],
-				"data_humidity":                value["data_humidity"],
-				"data_temperature":             value["data_temperature"],
 			},
 			"name": "SmartLights",
 			"tags": gin.H{
-
 				"applicationID":              value["applicationID"],
 				"devEUI":                     value["devEUI"],
 				"fPort":                      value["fPort"],
@@ -140,7 +138,7 @@ func GetSmartLightbyNodeName(c *gin.Context) {
 				"txInfo_dataRate_modulation": "LORA",
 			},
 			"timestamp": value["time"],
-		} // Convert the row to a gin.H map (JSON)
+		}
 		objs = append(objs, obj) // Append the row to the objs slice
 	}
 
@@ -180,6 +178,8 @@ func GetSmartLightbyDevEUI(c *gin.Context) {
 			"fields": gin.H{
 				"data_counter_0d_0":            value["data_counter_0d_0"],
 				"data_counter_0d_1":            value["data_counter_0d_1"],
+				"data_humidity":                value["data_humidity"],
+				"data_temperature":             value["data_temperature"],
 				"fCnt":                         value["fCnt"],
 				"rxInfo_altitude_0":            value["rxInfo_altitude_0"],
 				"rxInfo_latitude_0":            value["rxInfo_latitude_0"],
@@ -188,8 +188,6 @@ func GetSmartLightbyDevEUI(c *gin.Context) {
 				"rxInfo_rssi_0":                value["rxInfo_rssi_0"],
 				"txInfo_dataRate_spreadFactor": value["txInfo_dataRate_spreadFactor"],
 				"txInfo_frequency":             value["txInfo_frequency"],
-				"data_humidity":                value["data_humidity"],
-				"data_temperature":             value["data_temperature"],
 			},
 			"name": "SmartLights",
 			"tags": gin.H{
