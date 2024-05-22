@@ -19,7 +19,7 @@ func GetArtesianWell(c *gin.Context) {
 		return
 	}
 
-	if interval == 400 { //TODO: Corrigir para >
+	if interval > 400 {
 		c.JSON(400, gin.H{"error": "Interval must be less than 400"})
 		return
 	}
