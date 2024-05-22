@@ -3,6 +3,7 @@ package database
 import (
 	"log"
 	"os"
+
 	"github.com/InfluxCommunity/influxdb3-go/influxdb3"
 )
 
@@ -20,7 +21,7 @@ func ConnectToDB() (*influxdb3.Client, error) {
 	if err != nil {
 		log.Fatal("Failed to connect to database")
 		return &influxdb3.Client{}, err
-	} 
+	}
 
 	return influxdb3Client, nil
 }
