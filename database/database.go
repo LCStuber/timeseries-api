@@ -2,14 +2,15 @@ package database
 
 import (
 	"log"
+	"os"
 
 	"github.com/InfluxCommunity/influxdb3-go/influxdb3"
 )
 
 func ConnectToDB() (*influxdb3.Client, error) {
-	url := "https://us-east-1-1.aws.cloud2.influxdata.com"
-	token := "MDjBexPHuWxo15wb9Y_KFTp1LPPCG3kRin7mktRMzGRDbPb0C6m22NX40kVUm7tZw2vGwa3zUQ0MjWdUm6d5OA=="
-	database := "smartcampusmaua"
+	url := os.Getenv("INFLUXDB_URL")
+	token := os.Getenv("INFLUXDB_TOKEN")
+	database := os.Getenv("INFLUXDB_DATABASE")
 
 	influxdb3Client, err := influxdb3.New(influxdb3.ClientConfig{
 		Host:     url,
